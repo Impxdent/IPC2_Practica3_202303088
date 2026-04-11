@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\André\\Desktop\\IPC2_Practica3_202303088\\GestionInventario\\GestionInventario.csproj": {}
+    "C:\\Users\\André\\Desktop\\IPC2_Practica3_202303088\\IPC2_Practica3_202303088.csproj": {}
   },
   "projects": {
-    "C:\\Users\\André\\Desktop\\IPC2_Practica3_202303088\\GestionInventario\\GestionInventario.csproj": {
+    "C:\\Users\\André\\Desktop\\IPC2_Practica3_202303088\\IPC2_Practica3_202303088.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\André\\Desktop\\IPC2_Practica3_202303088\\GestionInventario\\GestionInventario.csproj",
-        "projectName": "GestionInventario",
-        "projectPath": "C:\\Users\\André\\Desktop\\IPC2_Practica3_202303088\\GestionInventario\\GestionInventario.csproj",
+        "projectUniqueName": "C:\\Users\\André\\Desktop\\IPC2_Practica3_202303088\\IPC2_Practica3_202303088.csproj",
+        "projectName": "IPC2_Practica3_202303088",
+        "projectPath": "C:\\Users\\André\\Desktop\\IPC2_Practica3_202303088\\IPC2_Practica3_202303088.csproj",
         "packagesPath": "C:\\Users\\André\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\André\\Desktop\\IPC2_Practica3_202303088\\GestionInventario\\obj\\",
+        "outputPath": "C:\\Users\\André\\Desktop\\IPC2_Practica3_202303088\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\André\\AppData\\Roaming\\NuGet\\NuGet.Config"
