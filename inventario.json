@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "nombre": "Leche Descremada 1L",
+    "categoria": "Lácteos",
+    "descripcion": "Leche de vaca enriquecida con vitaminas A y D",
+    "precio": 1.50,
+    "cantidadStock": 45,
+    "fechaVencimiento": "2026-05-20:00:00"
+  },
+  {
+    "id": 2,
+    "nombre": "Pan Integral",
+    "categoria": "Panadería",
+    "descripcion": "Pan de trigo 100% integral sin conservantes",
+    "precio": 2.25,
+    "cantidadStock": 12,
+    "fechaVencimiento": "2026-04-25:00:00"
+  },
+  {
+    "id": 3,
+    "nombre": "Detergente Líquido",
+    "categoria": "Limpieza",
+    "descripcion": "Detergente multiusos aroma a limón",
+    "precio": 5.99,
+    "cantidadStock": 3,
+    "fechaVencimiento": null
+  }
+]
