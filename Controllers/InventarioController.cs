@@ -10,17 +10,11 @@ namespace IPC2_Practica3_202303088.Controllers
 
         public IActionResult Index()
         {
+            string rutaReal = Path.GetFullPath("inventario.json");
+            ViewBag.RutaDeteccion = rutaReal;
+            ViewData["Ruta"] = rutaReal;
+
             var productos = _service.LeerTodo();
-
-            if (productos.Count == 0)
-            {
-                var pPrueba = new Producto();
-                pPrueba.SetNombre("Producto de Error (JSON vacío o no leído)");
-                pPrueba.SetCategoria("Debug");
-                pPrueba.SetPrecio(0);
-                productos.Add(pPrueba);
-            }
-
             return View(productos);
         }
 
