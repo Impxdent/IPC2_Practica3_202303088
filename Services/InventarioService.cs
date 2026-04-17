@@ -90,11 +90,6 @@ namespace IPC2_Practica3_202303088.Services
                 System.Diagnostics.Debug.WriteLine("Error al guardar JSON: " + ex.Message);
             }
         }
-
-        /// <summary>
-        /// Clase interna para facilitar la serialización/deserialización
-        /// ya que los campos de la clase Producto son privados.
-        /// </summary>
         private class ProductoDTO
         {
             public int id { get; set; }

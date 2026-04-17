@@ -1,26 +1,5 @@
 @model IEnumerable<IPC2_Practica3_202303088.Models.Producto>
 
-@{
-    // Intentamos obtener la ruta de cualquiera de los dos lados
-    var rutaCualquiera = ViewBag.RutaDeteccion ?? ViewData["Ruta"];
-}
-
-@if (rutaCualquiera != null)
-{
-    <div class="alert alert-warning shadow-sm">
-        <strong>📍 Buscando JSON en:</strong> <code>@rutaCualquiera</code>
-        <br/>
-        <small class="text-muted">Asegúrate de que el archivo 'inventario.json' esté físicamente en esa carpeta.</small>
-    </div>
-}
-else 
-{
-    <div class="alert alert-danger">
-        <strong>⚠️ Error crítico:</strong> El controlador sigue sin enviar la información. 
-        Intenta cerrar Visual Studio y volverlo a abrir.
-    </div>
-}
-
 <div class="card shadow">
     <div class="card-header bg-white d-flex justify-content-between align-items-center">
         <h4 class="mb-0 text-primary">Gestión de Inventario</h4>

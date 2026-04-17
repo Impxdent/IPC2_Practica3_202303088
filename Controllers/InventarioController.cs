@@ -10,10 +10,6 @@ namespace IPC2_Practica3_202303088.Controllers
 
         public IActionResult Index()
         {
-            string rutaReal = Path.GetFullPath("inventario.json");
-            ViewBag.RutaDeteccion = rutaReal;
-            ViewData["Ruta"] = rutaReal;
-
             var productos = _service.LeerTodo();
             return View(productos);
         }
