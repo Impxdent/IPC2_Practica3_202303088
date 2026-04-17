@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "nombre": "Producto de Prueba",
+    "nombre": "Producto de modificacion",
     "categoria": "General",
-    "descripcion": "Si ves esto, ya funciona",
-    "precio": 15.50,
-    "cantidadStock": 10,
+    "descripcion": "si funciona",
+    "precio": 16.00,
+    "cantidadStock": 15,
     "fechaVencimiento": "2026-12-31T00:00:00"
   },
   {

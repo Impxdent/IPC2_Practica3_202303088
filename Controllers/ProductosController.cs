@@ -8,51 +8,45 @@ namespace IPC2_Practica3_202303088.Controllers
     {
         private readonly InventarioService _service = new InventarioService();
 
-        [HttpGet]
-        public IActionResult Index() 
-        {
-            return View(_service.LeerTodo());
-        }
+        public IActionResult Index() => View(_service.LeerTodo());
 
-        [HttpGet]
-        public IActionResult Formulario()
-        {
-            return View();
-        }
+        public IActionResult Formulario() => View();
 
-        [HttpPost]
-        public IActionResult Guardar(string nombre, string descripcion, string categoria, decimal precio, int cantidadStock, DateTime? fechaVencimiento)
+        public IActionResult Modificar(int id)
         {
-            var productos = _service.LeerTodo();
-            int nuevoId = productos.Count > 0 ? productos.Max(p => p.GetId()) + 1 : 1;
-            var nuevo = new Producto();
-            nuevo.SetId(nuevoId);
-            nuevo.SetNombre(nombre);
-            nuevo.SetDescripcion(descripcion);
-            nuevo.SetCategoria(categoria);
-            nuevo.SetPrecio(precio);
-            nuevo.SetCantidadStock(cantidadStock);
-            nuevo.SetFechaVencimiento(fechaVencimiento);
-            
-            productos.Add(nuevo);
-            _service.GuardarTodo(productos);
-
-            return RedirectToAction("Index", "Inventario"); 
+            var producto = _service.LeerTodo().FirstOrDefault(p => p.GetId() == id);
+            return producto != null ? View("Formulario", producto) : RedirectToAction("Index");
         }
 
         [HttpPost]
-        public IActionResult Eliminar(int id)
+        public IActionResult Guardar(int? id, string nombre, string descripcion, string categoria, decimal precio, int cantidadStock, DateTime? fechaVencimiento)
         {
             var productos = _service.LeerTodo();
-            var producto = productos.FirstOrDefault(p => p.GetId() == id);
             
-            if (producto != null) 
-            {
-                productos.Remove(producto);
-                _service.GuardarTodo(productos);
+            if (id.HasValue && id > 0) {
+                var p = productos.FirstOrDefault(x => x.GetId() == id);
+                if (p != null) {
+                    p.SetNombre(nombre); p.SetDescripcion(descripcion); p.SetCategoria(categoria);
+                    p.SetPrecio(precio); p.SetCantidadStock(cantidadStock); p.SetFechaVencimiento(fechaVencimiento);
+                }
+            } else {
+                var p = new Producto();
+                p.SetId(productos.Count > 0 ? productos.Max(x => x.GetId()) + 1 : 1);
+                p.SetNombre(nombre); p.SetDescripcion(descripcion); p.SetCategoria(categoria);
+                p.SetPrecio(precio); p.SetCantidadStock(cantidadStock); p.SetFechaVencimiento(fechaVencimiento);
+                productos.Add(p);
             }
 
-            return RedirectToAction("Index", "Inventario");
+            _service.GuardarTodo(productos);
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult Eliminar(int id) {
+            var productos = _service.LeerTodo();
+            productos.RemoveAll(p => p.GetId() == id);
+            _service.GuardarTodo(productos);
+            return RedirectToAction("Index");
         }
     }
 }
