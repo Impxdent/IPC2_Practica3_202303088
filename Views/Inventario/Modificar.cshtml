@@ -8,6 +8,13 @@
                     <h5 class="mb-0">Modificar Producto</h5>
                 </div>
                 <div class="card-body">
+                    @if (ViewBag.Error != null)
+                    {
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>Error:</strong> @ViewBag.Error
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    }
                     <form action="/Inventario/Guardar" method="post">
                         <input type="hidden" name="id" value="@Model.GetId()" />
                         <div class="mb-3">

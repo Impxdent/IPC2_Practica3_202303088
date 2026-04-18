@@ -10,7 +10,6 @@ namespace IPC2_Practica3_202303088.Models
         private int cantidadStock;
         private DateTime? fechaVencimiento;
 
-        // Getters
         public int GetId() => id;
         public string GetNombre() => nombre;
         public string GetDescripcion() => descripcion;
@@ -19,7 +18,6 @@ namespace IPC2_Practica3_202303088.Models
         public int GetCantidadStock() => cantidadStock;
         public DateTime? GetFechaVencimiento() => fechaVencimiento;
 
-        // Setters
         public void SetId(int val) => id = val;
         public void SetNombre(string val) => nombre = val;
         public void SetDescripcion(string val) => descripcion = val;

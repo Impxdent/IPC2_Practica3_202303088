@@ -25,9 +25,13 @@ namespace IPC2_Practica3_202303088.Services
                 if (listaDTO != null) {
                     foreach (var item in listaDTO) {
                         var p = new Producto();
-                        p.SetId(item.id); p.SetNombre(item.nombre); p.SetCategoria(item.categoria);
-                        p.SetDescripcion(item.descripcion); p.SetPrecio(item.precio);
-                        p.SetCantidadStock(item.cantidadStock); p.SetFechaVencimiento(item.fechaVencimiento);
+                        p.SetId(item.id); 
+                        p.SetNombre(item.nombre); 
+                        p.SetCategoria(item.categoria);
+                        p.SetDescripcion(item.descripcion); 
+                        p.SetPrecio(item.precio);
+                        p.SetCantidadStock(item.cantidadStock); 
+                        p.SetFechaVencimiento(item.fechaVencimiento);
                         resultado.Add(p);
                     }
                 }
@@ -38,9 +42,13 @@ namespace IPC2_Practica3_202303088.Services
         public void GuardarTodo(List<Producto> productos)
         {
             var dto = productos.Select(p => new ProductoDTO {
-                id = p.GetId(), nombre = p.GetNombre(), categoria = p.GetCategoria(),
-                descripcion = p.GetDescripcion(), precio = p.GetPrecio(),
-                cantidadStock = p.GetCantidadStock(), fechaVencimiento = p.GetId() != 0 ? p.GetFechaVencimiento() : null
+                id = p.GetId(), 
+                nombre = p.GetNombre(), 
+                categoria = p.GetCategoria(),
+                descripcion = p.GetDescripcion(), 
+                precio = p.GetPrecio(),
+                cantidadStock = p.GetCantidadStock(), 
+                fechaVencimiento = p.GetId() != 0 ? p.GetFechaVencimiento() : null
             }).ToList();
             File.WriteAllText(_path, JsonSerializer.Serialize(dto, new JsonSerializerOptions { WriteIndented = true }));
         }

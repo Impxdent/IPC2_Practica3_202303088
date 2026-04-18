@@ -29,18 +29,19 @@
                                 <td>@item.GetId()</td>
                                 <td><strong>@item.GetNombre()</strong></td>
                                 <td>@item.GetDescripcion()</td>
-                                <td><span class="badge bg-info text-dark">@item.GetCategoria()</span></td>
+                                <td><span>@item.GetCategoria()</span></td>
                                 <td>Q @(item.GetPrecio().ToString("F2"))</td>
                                 <td>
-                                    <span class="badge @(item.GetCantidadStock() <= 5 ? "bg-danger" : "bg-success")">
-                                        @item.GetCantidadStock()
-                                    </span>
+                                    <span>@item.GetCantidadStock()</span>
                                 </td>
                                 <td>@(item.GetFechaVencimiento()?.ToString("dd/MM/yyyy") ?? "N/A")</td>
                                 <td>
                                     <div class="btn-group">
                                         <a href="/Inventario/Modificar/@item.GetId()" class="btn btn-warning btn-sm">Modificar</a>
-                                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                                        <form action="/Inventario/Eliminar" method="post" style="display:inline;" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este producto?');">
+                                            <input type="hidden" name="id" value="@item.GetId()" />
+                                            <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                                        </form>
                                     </div>
                                 </td>
                             </tr>
