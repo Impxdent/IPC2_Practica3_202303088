@@ -1,0 +1,29 @@
+[
+  {
+    "id": 2,
+    "nombre": "Arroz",
+    "categoria": "Comida",
+    "descripcion": "Marca Suli",
+    "precio": 5.00,
+    "cantidadStock": 50,
+    "fechaVencimiento": "2026-05-09T00:00:00"
+  },
+  {
+    "id": 3,
+    "nombre": "Celular",
+    "categoria": "Electr\u00F3nicos",
+    "descripcion": "Marca Apple",
+    "precio": 500.00,
+    "cantidadStock": 5,
+    "fechaVencimiento": "2026-04-17T00:00:00"
+  },
+  {
+    "id": 4,
+    "nombre": "Cuaderno",
+    "categoria": "Oficina",
+    "descripcion": "100 hojas lineas",
+    "precio": 20,
+    "cantidadStock": 25,
+    "fechaVencimiento": null
+  }
+]

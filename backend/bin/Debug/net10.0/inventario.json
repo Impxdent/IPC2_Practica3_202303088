@@ -1,0 +1,38 @@
+[
+  {
+    "id": 2,
+    "nombre": "Arroz",
+    "categoria": "Comida",
+    "descripcion": "Marca Suli",
+    "precio": 5.00,
+    "cantidadStock": 50,
+    "fechaVencimiento": "2026-05-09T00:00:00"
+  },
+  {
+    "id": 3,
+    "nombre": "Celular",
+    "categoria": "Electr\u00F3nicos",
+    "descripcion": "Marca Apple",
+    "precio": 500.00,
+    "cantidadStock": 5,
+    "fechaVencimiento": "2026-04-17T00:00:00"
+  },
+  {
+    "id": 4,
+    "nombre": null,
+    "categoria": null,
+    "descripcion": null,
+    "precio": 0,
+    "cantidadStock": 0,
+    "fechaVencimiento": null
+  },
+  {
+    "id": 5,
+    "nombre": null,
+    "categoria": null,
+    "descripcion": null,
+    "precio": 0,
+    "cantidadStock": 0,
+    "fechaVencimiento": null
+  }
+]
